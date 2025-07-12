@@ -1,4 +1,5 @@
 import streamlit as st
+import urllib.parse 
 import pandas as pd
 import pickle
 import time
@@ -525,3 +526,34 @@ st.markdown("""
         <p>Built with ❤️ using Streamlit and Machine Learning</p>
     </div>
 """, unsafe_allow_html=True)
+
+# WhatsApp Share Section
+if model and 'prediction' in locals():
+    share_message = (
+        f"🚗 My vehicle emits approximately {prediction:.2f} g/km of CO₂!\n"
+        f"🌿 Use this AI tool to predict yours: https://vehicle-co2-ai-predictor-5zm9yzycd74bbkno8pahrt.streamlit.app/\n"
+        f"🔗 Made with ❤️ using Streamlit"
+    )
+    encoded_message = urllib.parse.quote(share_message)
+    whatsapp_link = f"https://wa.me/?text={encoded_message}"
+
+    st.markdown("### 📤 Share Your Result")
+    st.markdown(f"""
+        <a href="{whatsapp_link}" target="_blank" style="
+            display:inline-block;
+            background-color:#25D366;
+            color:white;
+            padding:10px 20px;
+            border:none;
+            border-radius:8px;
+            font-size:16px;
+            font-weight:600;
+            text-decoration:none;
+        ">
+            💬 Share Your CO₂ Result on WhatsApp
+        </a>
+    """, unsafe_allow_html=True)
+
+
+
+                    
