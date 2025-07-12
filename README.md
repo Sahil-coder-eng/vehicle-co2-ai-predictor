@@ -16,7 +16,7 @@ An AI-powered web application that predicts the **CO₂ emissions** of a vehicle
 
 ## 🖥 Demo
 
-🔗 Live App: [View on Streamlit](https://your-deployment-url-here)
+🔗 Live App: [View on Streamlit](https://vehicle-co2-ai-predictor-5zm9yzycd74bbkno8pahrt.streamlit.app/)
 
 📸 UI Preview:
 ![App Screenshot](https://your-screenshot-link-here)
